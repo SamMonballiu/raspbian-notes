@@ -11,6 +11,13 @@ There is an 80 character line length limit to entries, any characters past this 
 [source](https://www.raspberrypi.org/documentation/configuration/config-txt/README.md)
 
 ## General
+
+### Pi 4 won't boot without HDMI plugged in
+Use sudo raspi-config to set a forced screen resolution. (Choose anything other than monitor default).
+
+The reason is that by default (RPi4), if no screen is connected at boot then a display device is not created. Without a display device the GUI desktop does not start so any program that requires GUI will not start. Other RPi models did not have that issue because they would fall back to composite mode if no HDMI was connected. The RPi4 has composite mode disabled by default so no display device is created.
+Setting a resolution mode with raspi-config or the GUI config tool or manual edits to config.txt as mentioned above, will force a display device on boot even without the HDMI connected as long as you don't choose the monitor default setting.
+
 ### Check free space
 ```
 df -h
