@@ -62,3 +62,31 @@ sudo apt-get update
 ```
 sudo apt-get full-upgrade
 ```
+
+## Samba
+### Install
+``` 
+sudo apt-get install samba samba-common-bin
+```
+
+### Edit smb.conf
+```
+sudo nano /etc/samba/smb.conf
+```
+
+```
+[nameofshare]
+path = /home/pi/
+writeable=Yes
+create mask=0777
+directory mask=0777
+public=yes
+guest=yes
+```
+
+### Restart Samba service
+```
+sudo systemctl restart smbd
+```
+
+
