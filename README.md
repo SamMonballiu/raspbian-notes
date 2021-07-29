@@ -23,6 +23,11 @@ Setting a resolution mode with raspi-config or the GUI config tool or manual edi
 df -h
 ```
 
+### Check disk usage
+```
+ncdu -x (q to quit)
+```
+
 
 ## APT
 
