@@ -94,4 +94,9 @@ guest=yes
 sudo systemctl restart smbd
 ```
 
-
+## NodeJs
+Let’s update our package repository to use the latest version of Node which is Node 16.5.0 by using the setup_16.x script from NodeSource.
+```
+$ curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+```
+In addition to updating your package repository, the setup script that runs in the previous command also invokes a sudo apt update command as one of its final steps.  Once again, the  sudo apt update command does not actually update any software on the system, but will download the latest package lists from the software repositories so that Raspbian will be aware of all new software available along with dependencies.
