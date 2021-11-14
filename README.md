@@ -12,6 +12,11 @@ There is an 80 character line length limit to entries, any characters past this 
 
 ## General
 
+### Check installed Raspbian version
+```
+cat /etc/os-release
+```
+
 ### Pi 4 won't boot without HDMI plugged in
 Use sudo raspi-config to set a forced screen resolution. (Choose anything other than monitor default).
 
