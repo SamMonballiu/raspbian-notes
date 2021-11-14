@@ -12,6 +12,11 @@ There is an 80 character line length limit to entries, any characters past this 
 
 ## General
 
+### Get current clock speed (1 sec interval)
+```
+watch -n 1 vcgencmd measure_clock arm
+```
+
 ### Check installed Raspbian version
 ```
 cat /etc/os-release
