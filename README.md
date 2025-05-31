@@ -89,6 +89,11 @@ sudo apt-get install samba samba-common-bin
 sudo nano /etc/samba/smb.conf
 ```
 
+### Set password
+```
+sudo smbpasswd -a <<username>>
+```
+
 ```
 [nameofshare]
 path = /home/pi/
